@@ -9,7 +9,7 @@ public class wage {
 	private final int maxWorkingHrs;
 	int totalSalary;
 
-	public EmpWageBuilder(String company, int empRatePerHr, int numWorkingDays, int maxWorkingHrs) {
+	public wage(String company, int empRatePerHr, int numWorkingDays, int maxWorkingHrs) {
 		this.company=company;
 		this.empRatePerHr=empRatePerHr;
 		this.numWorkingDays=numWorkingDays;
@@ -50,11 +50,11 @@ public class wage {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wage Computation Program");
-		EmpWageBuilder Flipkart = new EmpWageBuilder("Flipkart",20,30,60);
-		EmpWageBuilder Amazon = new EmpWageBuilder("Amazon",10,40,80);
-		Flipkart.computeEmpWage();
-		System.out.println(Flipkart);
-		Amazon.computeEmpWage();
-		System.out.println(Amazon);
+		wage flipkart = new wage("Flipkart",20,30,60);
+		wage amazon = new wage("Amazon",10,40,80);
+		flipkart.computeEmpWage();
+		System.out.println(flipkart);
+		amazon.computeEmpWage();
+		System.out.println(amazon);
 	}
 }
