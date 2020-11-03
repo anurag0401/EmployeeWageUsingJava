@@ -29,6 +29,23 @@ public class wage {
         else
                 System.out.println("Employee is absent then Part time EmpWage: 0");
 
+	int isFullTime=1;
+        int isPartTime=2;
+        
+        switch ((int) empCheck) {
+            case 1:
+                int fullTimeEmpHrs=8;
+                 wage=empRatePerHr*fullTimeEmpHrs;
+		System.out.println("Fulltime employee" +wage);
+            case 2:
+                int partTimeEmpHrs=4;
+                wage=empRatePerHr*partTimeEmpHrs;
+		System.out.println("Parttime Employee" +wage);
+            default:
+                wage=0;
+		System.out.println("Wage" +wage);
+	}
+
 }
 
 }
