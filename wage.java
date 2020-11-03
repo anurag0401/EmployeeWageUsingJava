@@ -20,6 +20,15 @@ public class wage {
 	}
 	else
 		System.out.println("Employee is absent then DailyEmpWage: 0");
+
+	int EmpHrs=4;
+        if ( empCheck == Present )
+        { 	wage=empRatePerHr*EmpHrs;
+		System.out.println("Employee is present then Part time EmpWage:" +wage);
+        }
+        else
+                System.out.println("Employee is absent then Part time EmpWage: 0");
+
 }
 
 }
