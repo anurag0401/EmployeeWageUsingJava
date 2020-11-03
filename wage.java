@@ -31,8 +31,9 @@ public class wage {
 
 	int isFullTime=1;
         int isPartTime=2;
-      
+        
         switch ((int) empCheck) {
+	
             case 1:
                 int fullTimeEmpHrs=8;
                  wage=empRatePerHr*fullTimeEmpHrs;
@@ -58,6 +59,27 @@ public class wage {
             		salary=0;
 			System.out.println("Monthly Salary is " +salary);
 		}
+
+	    int totalempHrs=0;
+            int totalempWorkDays=0;
+            int maxWorkingHrs=100;
+	    int Salary;
+            while (totalempHrs<maxWorkingHrs && totalempHrs<numWorkingDays)
+		{
+                	switch ((int) empCheck){
+                    	case 1:
+                        	empHrs=8;
+                        	totalempHrs=totalempHrs+empHrs;
+                    	case 2:
+                        	empHrs=4;
+                        	totalempHrs=totalempHrs+empHrs;
+                    	default:
+                        	empHrs=0;
+                }
+            
+            Salary=(totalempHrs*empRatePerHr);
+		System.out.println("Salary is " +Salary);
+        }
 
 }
 
