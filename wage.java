@@ -31,7 +31,7 @@ public class wage {
 
 	int isFullTime=1;
         int isPartTime=2;
-        
+      
         switch ((int) empCheck) {
             case 1:
                 int fullTimeEmpHrs=8;
@@ -45,6 +45,19 @@ public class wage {
                 wage=0;
 		System.out.println("Wage" +wage);
 	}
+
+            int numWorkingDays = 20;
+            int salary;
+		if ( empCheck == Present )
+        	{
+			salary=numWorkingDays*empRatePerHr*empHrs;
+                	System.out.println("Monthly Salary is " +salary);
+        	}
+        	else
+                {
+            		salary=0;
+			System.out.println("Monthly Salary is " +salary);
+		}
 
 }
 
