@@ -98,8 +98,8 @@ public class wage {
 		System.out.println(amazon);
 =======
 		wage empwage = new wage();
-		empwage.addCompanyEmpWage("DMart",20,30,60);
-		empwage.addCompanyEmpWage("Reliance",10,40,80);
+		empwage.addCompanyEmpWage("Flipkart",20,30,60);
+		empwage.addCompanyEmpWage("Amazon",10,40,80);
 		empwage.computeEmpWage();
 >>>>>>> uc-10-Manage-empwage-different-company
 	}
