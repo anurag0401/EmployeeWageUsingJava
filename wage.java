@@ -26,25 +26,11 @@ public class wage {
 	public static final int isPartTime=1;
 	public static final int isFullTime=2;
 
-<<<<<<< HEAD
-	private final String company;
-	private final int empRatePerHr;
-	private final int numWorkingDays;
-	private final int maxWorkingHrs;
-	int totalSalary;
-
-	public wage(String company, int empRatePerHr, int numWorkingDays, int maxWorkingHrs) {
-		this.company=company;
-		this.empRatePerHr=empRatePerHr;
-		this.numWorkingDays=numWorkingDays;
-		this.maxWorkingHrs=maxWorkingHrs;
-=======
 	private int numOfCompany=0;
 	private CompanyEmpWage[] companyEmpWageArray;
 
 	public wage(){
 		companyEmpWageArray=new CompanyEmpWage[5];
->>>>>>> uc-10-Manage-empwage-different-company
 	}
 
 	private void addCompanyEmpWage(String company, int empRatePerHr, int numWorkingDays, int maxWorkingHrs) {
@@ -88,19 +74,9 @@ public class wage {
 	}
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
-		System.out.println("Welcome to Employee Wage Computation Program");
-		wage flipkart = new wage("Flipkart",20,30,60);
-		wage amazon = new wage("Amazon",10,40,80);
-		flipkart.computeEmpWage();
-		System.out.println(flipkart);
-		amazon.computeEmpWage();
-		System.out.println(amazon);
-=======
-		wage empwage = new wage();
-		empwage.addCompanyEmpWage("Flipkart",20,30,60);
-		empwage.addCompanyEmpWage("Amazon",10,40,80);
-		empwage.computeEmpWage();
->>>>>>> uc-10-Manage-empwage-different-company
+		wage empWage = new wage();
+		empWage.addCompanyEmpWage("Flipkart",20,30,60);
+		empWage.addCompanyEmpWage("Amazon",10,40,80);
+		empWage.computeEmpWage();
 	}
 }
