@@ -33,14 +33,17 @@ public class wage implements wageInterface {
 	public static final int isFullTime=2;
 
 	ArrayList<CompanyEmpWage> companies;
+	HashMap<String, Integer> totalEmpWages;
 
 	public wage(){
 		companies=new ArrayList<>();
+		totalEmpWages=new HashMap<>();
 	}
 
 	public void addCompanyEmpWage(String company, int empRatePerHr, int numWorkingDays, int maxWorkingHrs) {
 		CompanyEmpWage companyob=new CompanyEmpWage(company,empRatePerHr,numWorkingDays,maxWorkingHrs);
 		companies.add(companyob);
+		totalEmpWages.put(company,0);
 	}
 
 	public void computeEmpWage(){
@@ -75,7 +78,16 @@ public class wage implements wageInterface {
 			workingHrs=workingHrs+empHrs;
 			System.out.println("Day#:"+totalWorkingDays+" Emp Hr: " +empHrs);
 		}
-		return (workingHrs*companyEmpWage.empRatePerHr);
+		int salary=workingHrs*companyEmpWage.empRatePerHr;
+		totalEmpWages.put(companyEmpWage.company,salary);
+		return salary;
+	}
+
+	void printEmpWages(){
+		System.out.println("Company Name and Total EmpWages are:");
+		for(String company : totalEmpWages.keySet()){
+			System.out.println(company+": "+totalEmpWages.get(company));
+		}
 	}
 
 	public static void main(String[] args) {
@@ -83,5 +95,6 @@ public class wage implements wageInterface {
 		empWage.addCompanyEmpWage("Flipkart",20,30,60);
 		empWage.addCompanyEmpWage("Amazon",10,40,80);
 		empWage.computeEmpWage();
+		empWage.printEmpWages();
 	}
 }
