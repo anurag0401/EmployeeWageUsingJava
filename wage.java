@@ -75,8 +75,8 @@ public class wage {
 
 	public static void main(String[] args) {
 		wage empwage = new wage();
-		empwage.addCompanyEmpWage("DMart",20,30,60);
-		empwage.addCompanyEmpWage("Reliance",10,40,80);
+		empwage.addCompanyEmpWage("Flipkart",20,30,60);
+		empwage.addCompanyEmpWage("Amazon",10,40,80);
 		empwage.computeEmpWage();
 	}
 }
