@@ -83,11 +83,8 @@ public class wage implements wageInterface {
 		return salary;
 	}
 
-	void printEmpWages(){
-		System.out.println("Company Name and Total EmpWages are:");
-		for(String company : totalEmpWages.keySet()){
-			System.out.println(company+": "+totalEmpWages.get(company));
-		}
+	public int getEmpWages(String company){
+			return totalEmpWages.get(company);
 	}
 
 	public static void main(String[] args) {
@@ -95,6 +92,6 @@ public class wage implements wageInterface {
 		empWage.addCompanyEmpWage("Flipkart",20,30,60);
 		empWage.addCompanyEmpWage("Amazon",10,40,80);
 		empWage.computeEmpWage();
-		empWage.printEmpWages();
+		System.out.println("Total Wage for Flipkart Company: "+empWage.getEmpWages("Flipkart"));
 	}
 }
